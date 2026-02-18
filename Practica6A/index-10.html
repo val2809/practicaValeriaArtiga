@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Reserva de Viajes</title>
+
+<style>
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #c8e6ff, #d9b3ff);
+    margin: 0;
+}
+
+
+.header{
+    text-align: center;
+    background-color: #6a0dad;
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+form{
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    width: 450px;
+}
+
+fieldset{
+    border: 2px solid #b266ff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+legend{
+    color: #6a0dad;
+    font-weight: bold;
+}
+
+label{
+    font-weight: bold;
+    color: #4b0082;
+    display: block;
+    margin-bottom: 12px;
+}
+
+input, select{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #b266ff;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus, select:focus{
+    border-color: #6a0dad;
+    box-shadow: 0 0 5px #b266ff;
+}
+
+input[type="submit"]{
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover{
+    background-color: #9b30ff;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    RESERVA DE VIAJES ✈️
+</div>
+
+<div class="contenedor">
+<form>
+
+    <fieldset>
+        <legend>Datos personales</legend>
+
+        <label>Nombre:
+            <input type="text" name="nombre" required>
+        </label>
+
+        <label>Correo electrónico:
+            <input type="email" name="correo" placeholder="example@email.com" required>
+        </label>
+
+        <label>Teléfono:
+            <input type="tel" name="telefono" required>
+        </label>
+
+        <label>Número de acompañantes:
+            <input type="number" name="acompanantes" min="1" max="5" step="1" required>
+        </label>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Datos del viaje</legend>
+
+        <label>Lugar de origen:
+            <input type="text" name="origen" value="San Salvador" readonly>
+        </label>
+
+        <label>Lugar de destino:
+            <select name="destino" required>
+                <option value="">Seleccione un destino</option>
+                <option value="Francia">Francia</option>
+                <option value="España">España</option>
+                <option value="Roma">Roma</option>
+                <option value="Venecia">Venecia</option>
+            </select>
+        </label>
+
+        <label>Fecha de salida:
+            <input type="date" name="fecha_salida" required>
+        </label>
+
+        <label>Fecha de regreso:
+            <input type="date" name="fecha_regreso" required>
+        </label>
+
+    </fieldset>
+
+    <input type="submit" value="Reservar viaje">
+
+</form>
+</div>
+
+</body>
+</html>
+
