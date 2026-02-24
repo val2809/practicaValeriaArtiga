@@ -8,15 +8,22 @@
 <body>
     <header>
     <h1>Rapunzel</h1>
-        <nav>
-            <ul>
-                <li><a href="#historia">Historia</a></li>
-                <li><a href="#informacion">Información</a></li>
-                <li><a href="#ficha">Ficha técnica</a></li>
-                <li><a href="#registro">Registro de fans</a></li>
-                <li><a href="#galeria">Galería</a></li>
-            </ul>
-        </nav>
+
+        <form action="#historia">
+            <label for="busqueda">Buscar sección:</label>
+            <input list="secciones" id="busqueda" name="seccion" placeholder="Escribe historia o informacion">
+
+                <datalist id="secciones">
+                    <option value="Historia">
+                    <option value="Informacion">
+                    <option value="Ficha">
+                    <option value="Registro">
+                    <option value="Galeria">
+                </datalist>
+
+            <button type="submit">Ir</button>
+        </form>
+        
     </header>
 
         <main>
@@ -24,11 +31,21 @@
         <section id="historia">
             <h2>Historia</h2>
                 <img src="Rapunzel.jpg" alt="Rapunzel" width="300">
+            <h3>En la historia</h3>
                 <p>
-                Rapunzel es una joven que fue entregada a una hechicera llamada Madre Gothel antes de nacer. Sus padres, 
+                Rapunzel es una joven que fue entrgada a una hechicera llamada Madre Gothel antes de nacer. Sus padres, 
                 al robar una planta del jardín de la hechicera,prometieron entregarla como castigo. La niña creció 
                 encerrada en una torre sin puertas ni escaleras. Su largo cabello dorado servía como única forma de acceso
                 a la torre. Con el tiempo, un príncipe la descubre y su vida cambia cuando comienza a soñar con la libertad.
+                </p>
+
+            <h3>En la pelicula</h3>
+                <p>
+                Rapunzel es una joven que fue robada por una hechicera llamada Madre Gothel despues de que el rey mandara a traer
+                una planta magica para salvar a su esposa y como esta dicha planta le daba juventud a la hechicera ella decidio 
+                robarse a la princesa. La niña creció encerrada en una torre sin puertas ni escaleras solo con su amigo pascal.
+                <img src="pascal.jpg" alt="Pascal" width="30">Su largo cabello dorado servía como única forma de acceso a la torre. 
+                Con el tiempo, un príncipe la descubre y su vida cambia cuando conoce la libertad.
                 </p>
 
                 <p>
@@ -49,10 +66,86 @@
                 </ul>
             <h3>Top 3 momentos más icónicos</h3>
                 <ol>
-                    <li>Cuando la hechicera dice: "¡Rapunzel, deja caer tu cabello!"</li>
-                    <li>Cuando conoce al príncipe en secreto.</li>
+                    <li>Cuando  Madre Gothel dice: "¡Rapunzel, deja caer tu cabello!"</li>
+                    <li>Cuando conoce al príncipe (Eugene)en secreto.</li>
                     <li>Cuando finalmente obtiene su libertad.</li>
                 </ol>
         </section>
+
+        <section id="ficha">
+            <h2>Ficha técnica</h2>
+
+            <table border="1">
+                <tr>
+                    <th>Dato</th>
+                    <th>Información</th>
+                </tr>
+                <tr>
+                    <td>Edad</td>
+                    <td>Aproximadamente 17-18 años</td>
+                </tr>
+                <tr>
+                    <td>Peso</td>
+                    <td>50 - 52 kg</td>
+                </tr>
+                <tr>
+                    <td>Peso Cabello</td>
+                    <td>35 - 40 kg</td>
+                </tr>
+                <tr>
+                    <td>Estatura</td>
+                    <td> 1.55 m</td>
+                </tr>
+                <tr>
+                    <td>Primera aparición</td>
+                    <td>Cuento de los Hermanos Grimm (1812)</td>
+                </tr>
+                <tr>
+                    <td>Debilidades</td>
+                    <td>Ingenuidad y aislamiento social</td>
+                </tr>
+                <tr>
+                    <td>Alias</td>
+                    <td>Preciosa</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="registro">
+            <h2>Registro de fans</h2>
+
+            <form>
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre"><br><br>
+
+                <label for="correo">Correo electrónico:</label><br>
+                <input type="email" id="correo" name="correo"><br><br>
+
+                <input type="submit" value="Unirme al club de fans">
+            </form>
+        </section>
+
+        <section id="galeria">
+            <h2>Galería</h2>
+                <img src="r3.jpg" alt="Rapunzel y Flynn" width="600">
+                <img src="r2.jpg" alt="Flor" width="224">
+                <img src="r8.jpg" alt="Rapunzel y Flynn 2" width="337">
+                <img src="r1.jpg" alt="Rapunzel" width="280">
+                <img src="r4.jpg" alt="Pascal" width="300">
+                <img src="r5.jpg" alt="Sol" width="300">
+                <img src="r6.jpg" alt="Flynn y Maximus" width="300">
+                <img src="r7.jpg" alt="Mini preciosa" width="300">
+                <img src="r9.jpg" alt="Rapunzel y Flynn 3" width="500">
+                <img src="r10.jpg"alt="Rapunzel y Flynn Cabello"width="400">
+        </section>
+        </main>
+
+    <footer>
+        <p>Creado por Valeria Michelle Artiga Aguilar</p>
+        <p>&copy; 2026 Todos los derechos reservados</p>
+    </footer>
+        
+
+
 </body>
 </html>
