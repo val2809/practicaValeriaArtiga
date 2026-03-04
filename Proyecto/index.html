@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Wiki de      Rapunzel</title>
+    <title>Wiki de Rapunzel</title>
     <link rel="stylesheet" href="estilos-r.css">
 </head>
 
@@ -11,19 +11,17 @@
     <header>
         <h1>Rapunzel</h1>
 
-        <form action="#historia">
-            <label for="busqueda">Buscar sección:</label>
-            <input list="secciones" id="busqueda" name="seccion" placeholder="Escribe historia o informacion">
+        <form>
+            <label for="seccion">Buscar sección:</label>
 
-            <datalist id="secciones">
-                <option value="Historia">
-                <option value="Informacion">
-                <option value="Ficha">
-                <option value="Registro">
-                <option value="Galeria">
-            </datalist>
-
-            <button type="submit">Ir</button>
+            <select id="seccion" onchange="location = this.value;">
+                <option value="">Selecciona una opción</option>
+                <option value="#historia">Historia</option>
+                <option value="#informacion">Información</option>
+                <option value="#ficha">Ficha técnica</option>
+                <option value="#registro">Registro</option>
+                <option value="#galeria">Galería</option>
+            </select>
         </form>
     </header>
 
@@ -84,7 +82,7 @@
 
             <p>
                 Más información en las
-                <a href="https://disney.fandom.com/es/wiki/Rapunzel" target="_blank">   
+                <a href="https://disney.fandom.com/es/wiki/Rapunzel" target="_blank">
                 Wikis oficiales de Rapunzel
                 </a>.
             </p>
