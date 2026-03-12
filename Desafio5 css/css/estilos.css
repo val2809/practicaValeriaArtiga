@@ -1,0 +1,36 @@
+body{
+    background-color: #e9e6f3;
+    font-family: serif;
+}
+
+h1{
+    text-align: center;
+}
+
+.tarjeta{
+    border-style: solid;
+    border-radius: 10px;
+    border-color: purple;
+    border-width: 2px;
+
+    width: 50%;
+
+    margin: 25px auto;
+
+    padding: 15px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    background-color: white;
+}
+
+img{
+    width: 75%;
+    height: 250px;        
+    object-fit: cover;    
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
