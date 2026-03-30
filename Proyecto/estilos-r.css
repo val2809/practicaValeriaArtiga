@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -28,7 +32,6 @@ header {
 }
 
 header h1 {
-    position: static;
     font-family: 'Allura', cursive;
     font-size: 68px;
     margin: 0 auto;
@@ -38,29 +41,57 @@ header h1 {
 
 header form {
     margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 8px 15px;
+    border-radius: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-header input {
-    padding: 10px;
-    width: 250px;
+header label {
+    font-weight: bold;
+    font-size: 14px;
 }
 
-header button {
+header select {
     padding: 10px 15px;
+    border-radius: 20px;
+    border: 2px solid #dfc326;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header select:hover {
+    box-shadow: 0 0 8px rgba(223, 195, 38, 0.6);
+}
+
+header select:focus {
+    outline: none;
+    border-color: #c5a81f;
 }
 
 
 #historia {
     padding: 40px;
+    overflow: hidden;
 }
-
 
 #historia img:first-of-type {
     display: block;
     margin: 30px auto;
     width: 240px;
+    clear: both;
+    transition: transform 0.4s, filter 0.4s;
 }
 
+#historia img:first-of-type:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px #dfc326);
+}
 
 #historia img:nth-of-type(2) {
     float: right;
@@ -68,31 +99,28 @@ header button {
     margin: 0 0 20px 30px;
 }
 
-
 #historia img[alt="Pascal"] {
     width: 22px;
-    vertical-align: middle;
-    margin: 0 6px;
+    height: 22px;
+    vertical-align: -3px;
+    display: inline;
+    margin: 0 4px;
 }
+
 
 section {
-    padding: 30px;              
-    margin: 30px auto;          
-    width: 90%;                 
-    background-color: rgba(242, 212, 248, 0.85); 
-    border-radius: 15px;        
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+    padding: 30px;
+    margin: 30px auto;
+    width: 90%;
+    background-color: rgba(242, 212, 248, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-#galeria {
-    padding: 40px;
-}
-
-
-#galeria h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 30px;
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 
@@ -100,23 +128,61 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
+    padding: 10px 40px 40px 40px;
+    justify-items: center;
 }
 
+#galeria h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+#galeria h2::after {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 #galeria img {
     width: 100%;
     height: 250px;
-    object-fit: cover; 
+    object-fit: cover;
     object-position: center;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-    transition: transform 0.3s;
+    transition: transform 0.3s, border 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 }
 
 #galeria img:hover {
-    transform: scale(1.05);
+    transform: scale(1.07);
     border: 3px solid #dfc326;
+    box-shadow: 0 0 15px rgba(223,195,38,0.7);
 }
+
+
+#linternas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#linternas video {
+    width: 60%;
+    max-width: 600px;
+    display: block;
+
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#linternas video:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(223,195,38,0.8);
+}
+
 
 table {
     width: 100%;
@@ -142,6 +208,7 @@ td {
 tr:hover {
     background-color: #f3e5f5;
 }
+
 
 #registro form {
     display: flex;
@@ -174,9 +241,21 @@ tr:hover {
     background-color: #c5a81f;
 }
 
+
 h2 {
     color: #a64ac9;
     margin-bottom: 15px;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #dfc326;
+    margin-top: 5px;
+    border-radius: 5px;
 }
 
 h3 {
@@ -201,6 +280,7 @@ a:hover {
     text-decoration: underline;
 }
 
+
 footer {
     text-align: center;
     padding: 20px;
@@ -211,12 +291,4 @@ footer {
 main {
     max-width: 1200px;
     margin: auto;
-}
-
-#galeria h2 {
-    margin-bottom: 5px;
-}
-
-#galeria {
-    padding-top: 10px;
 }
